@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCR Screenshot Lab</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>OCR Screenshot Lab</h1>
+        <p>Screenshot text extraction using PaddleOCR.js</p>
+      </header>
+
+      <section class="panel">
+        <input id="imageInput" type="file" accept="image/*" />
+        <img id="preview" hidden alt="Screenshot preview" />
+        <button id="extractBtn" disabled>Extract Text</button>
+        <p id="status">Select a message screenshot to begin.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Extracted Text</h2>
+        <textarea id="output" readonly placeholder="OCR results will appear here..."></textarea>
+      </section>
+
+      <section class="panel">
+        <h2>Detected Text Regions</h2>
+        <div id="regions"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Performance</h2>
+        <pre id="metrics">Waiting for OCR...</pre>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
